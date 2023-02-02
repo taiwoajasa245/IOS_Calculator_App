@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <title>Calculator</title>
+</head>
+
+<body>
+  <div class="calculator">
+    <div class="screen">
+      <input type="text" name="number-input " id="screen" value="" placeholder="0" />
+    </div>
+    <div class="buttons">
+      
+      <button><div onclick="screen.value=''" class="btn ac bg-grey">AC</div></button>
+      
+      <button><div id="plus" onclick="screen.value=''" class="btn plus/minus bg-grey">+/-</div></button>
+      <button><div onclick="remain()" class="btn percent bg-grey">%</div></button>
+      <button><div id="btn" class="btn division bg-orange">÷</div></button>
+      
+      <button><div id="btn" class="btn seven">7</div></button>
+      <button> <div id="btn" class="btn eight">8</div></button>
+     
+      <button><div id="btn" class="btn nine">9</div></button>
+ 
+      <button><div id="btn" class="btn multiply bg-orange">x</div></button>
+      
+      <button> <div id="btn" class="btn four">4</div></button>
+     
+      <button><div id="btn" class="btn five">5</div></button>
+    
+      <button> <div id="btn" class="btn six">6</div></button>
+     
+      <button> <div id="btn" class="btn minus bg-orange">-</div></button>
+     
+      <button> <div id="btn" class="btn one">1</div></button>
+
+     
+      <button><div id="btn" class="btn two">2</div></button>
+      
+      <button><div id="btn" class="btn three">3</div></button>
+      
+      <button><div id="btn" class="btn plus bg-orange">+</div></button>
+      
+      <div id="btn" class="btn zero">0</div>
+      
+      
+      <button><div id="btn" class="btn quote">.</div></button>
+ 
+      
+      <button><div  onclick="screen.value=eval(screen.value)" class="btn equals bg-orange">=</div></button>
+      
+    
+      
+      
+      
+    
+    </div>
+
+
+    
+   
+  </div>
+   <div class="desktop">
+      <h1> 419 Error!</h1>
+      <p> Only for Mobile!! page not found</p>
+    </div>
+</body>
+
+
+<script>
+  const btn = document.querySelectorAll('#btn');
+  const screen = document.querySelector('#screen'); 
+   
+  
+  for(item of btn) 
+  {
+    item.addEventListener('click', (e) => 
+    {
+      btntext = e.target.innerText; 
+      
+      
+      if(btntext == "x")
+     {
+       btntext = '*';
+       
+     }
+     
+      if(btntext == "÷")
+     {
+       btntext = '/';
+       
+     }
+      screen.value += btntext;
+     
+     
+    
+    });
+    
+    
+  }
+  
+  function backSpace()
+  {
+    screen.value = screen.value.substr(0,screen.value.length - 1);
+    
+    console.log('hhfvgg');
+  }
+  
+  function remain()
+  {
+    screen.value = screen.value / 100;
+  }
+  
+
+</script>
+</html>
